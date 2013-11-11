@@ -19,6 +19,16 @@ public class AlphaMapTest extends BasicGame {
 	/** The texture to apply over the top */
 	private Image textureMap;
 	
+        public static void main(String[] argv) {
+            try {
+                    AppGameContainer container = new AppGameContainer(new AlphaMapTest());
+                    container.setDisplayMode(800,600,false);
+                    container.start();
+		} 
+            catch (SlickException e) {
+                e.printStackTrace();
+	    }
+	}
 	/**
 	 * Create a new tester for the clip plane based clipping
 	 */
@@ -72,13 +82,4 @@ public class AlphaMapTest extends BasicGame {
 	 * 
 	 * @param argv The arguments to pass into the test
 	 */
-	public static void main(String[] argv) {
-		try {
-			AppGameContainer container = new AppGameContainer(new AlphaMapTest());
-			container.setDisplayMode(800,600,false);
-			container.start();
-		} catch (SlickException e) {
-			e.printStackTrace();
-		}
-	}
 }
